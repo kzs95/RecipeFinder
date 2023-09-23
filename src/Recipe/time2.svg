@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   height="20"
+   viewBox="0 -960 800 800"
+   width="20"
+   version="1.1"
+   id="svg4"
+   sodipodi:docname="time_24.svg"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     id="namedview6"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="12.212323"
+     inkscape:cx="27.554134"
+     inkscape:cy="17.195745"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4" />
+  <circle
+     style="fill:#f5f7db;fill-opacity:1;stroke-width:206.816;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke fill markers"
+     id="path1026"
+     cx="400"
+     cy="-560"
+     r="360" />
+  <path
+     d="m 538.924,-378.924 42.152,-42.152 -151.077,-151.087 V -760 h -59.998 v 212.154 z m -138.857,198.923 q -78.836,0 -148.204,-29.92 -69.369,-29.92 -120.682,-81.21 -51.314,-51.291 -81.247,-120.629 -29.933,-69.337 -29.933,-148.173 0,-78.836 29.92,-148.204 29.92,-69.369 81.21,-120.682 51.291,-51.314 120.629,-81.247 69.337,-29.933 148.173,-29.933 78.836,0 148.204,29.92 69.369,29.92 120.682,81.21 51.314,51.291 81.247,120.629 29.933,69.337 29.933,148.173 0,78.836 -29.92,148.204 -29.92,69.369 -81.21,120.682 -51.291,51.314 -120.629,81.247 -69.337,29.933 -148.173,29.933 z M 400,-560 Z m 0,320 q 133,0 226.5,-93.5 Q 720,-427 720,-560 720,-693 626.5,-786.5 533,-880 400,-880 267,-880 173.5,-786.5 80,-693 80,-560 80,-427 173.5,-333.5 267,-240 400,-240 Z"
+     id="path2"
+     style="fill:#4b8155;fill-opacity:1" />
+</svg>

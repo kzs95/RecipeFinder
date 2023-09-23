@@ -1,38 +1,152 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Square+Peg&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap');
+
+* {
+  font-family: 'Caveat', 'Garamond', 'Times New Roman', 'serif';
+  font-size: 1.1rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  margin-inline: auto;
+  width: min(800px, 95dvw);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h1 {
+  font-size: clamp(1.4rem, 1.3846rem + 1.2308vw, 2rem);
+  font-weight: normal;
+  margin-block: .5rem;
+}
+
+nav h1::before {
+  content: '';
+  height: 1em;
+  aspect-ratio: 1;
+  vertical-align: middle;
+  display: inline-block;
+  background-image: url(./Home/logo.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 5px;
+}
+
+h2 {
+  font-family: 'Square Peg';
+  font-weight: normal;
+  font-size: clamp(1.3rem, 1.3846rem + 1.2308vw, 2rem);
+  margin-block: .5rem;
+  width: max-content;
+  color: transparent;
+  background-image: linear-gradient(to right, #ffa6c9, #f6adc6, #c5dbda);
+  background-clip: text;
+  --webkit-background-clip: text;
+}
+
+h3 {
+  font-family: 'Square Peg';
+  font-weight: normal;
+  font-size: clamp(1.1rem, 1.3846rem + 1.2308vw, 1.5rem);
+  margin-block: .3rem .5rem;
+  width: max-content;
+  color: transparent;
+  background-image: linear-gradient(to right, #26619c, 70%, #ccccff);
+  background-clip: text;
+  --webkit-background-clip: text;
+}
+
+a {
+  text-decoration: none;
+  color: #367588;
+}
+
+table,
+th,
+td {
+  border: 1px solid #d8bfd8;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: .2rem .4rem;
+  text-align: left;
+}
+
+th {
+  background-color: #f8f4ff;
+}
+
+ul,
+ol {
+  margin-block: .5rem;
+  padding-inline-start: 1rem;
+}
+
+ul {
+  list-style-type: circle;
+}
+
+li {
+  margin-block-end: .3rem;
+}
+
+figure {
+  margin-block: 1rem;
+}
+
+figure img {
+  max-width: 100%;
+}
+
+form {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-flow: column nowrap;
+  gap: .5rem;
 }
 
-.App-link {
-  color: #61dafb;
+div.App>div {
+  margin-block-end: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+div.flexbox {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-content: flex-start;
+  gap: .5rem;
+}
+
+a#homeIcon {
+  display: block;
+  width: max-content;
+  color: transparent;
+  background-image: linear-gradient(to right, #a2a2d0, #c8a2c8, #92a1cf, #abcdef);
+  background-clip: text;
+  --webkit-background-clip: text;
+}
+
+a#credit {
+  color: #4c9173;
+}
+
+a#credit::before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  height: 1em;
+  aspect-ratio: 1;
+  background-image: url(../public/spoonacular-logo.svg);
+  background-size: contain;
+}
+
+@media(hover:hover) {
+  a:not([id]):hover {
+    text-decoration: underline;
   }
 }

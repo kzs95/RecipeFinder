@@ -1,25 +1,23 @@
-import logo from './logo.svg';
+import React, { useState } from "react";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import Home from './Home/home.js';
+import Recipe from './Recipe/recipe.js';
+
 import './App.css';
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <BrowserRouter>
+        <nav>
+          <Link to="/" id='homeIcon'><h1>Recipe Finder</h1></Link>
+        </nav>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/recipe/:recipeId" element={<Recipe />} />
+        </Routes>
+      </BrowserRouter>
+      <div>This page uses <a id='credit' target='blank' href='https://spoonacular.com/food-api'>spoonacular API</a></div>
     </div>
   );
 }
-
-export default App;

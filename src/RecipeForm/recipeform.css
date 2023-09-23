@@ -1,0 +1,42 @@
+form {
+    padding: .8rem;
+    background: radial-gradient(circle farthest-side at top left, #FFF0F5, #FFF5EE);
+}
+
+fieldset {
+    border: 0;
+    padding: .5rem;
+    background-color: #FFFAFA;
+}
+
+legend {
+    text-align: left;
+    padding: .25rem;
+    text-shadow: 0 0 .7rem #f0e130;
+}
+
+label {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    gap: 1rem;
+    max-width: 100%;
+}
+
+label:has(:not(input[type='radio'])){
+    flex-flow: column wrap;
+    gap:.2rem;
+}
+
+input,select{
+    max-width: 100%;
+}
+
+input[type='submit'],
+button {
+    cursor: pointer;
+    background-color: #fdbcb4;
+    border: 1.5px solid #ef98aa;
+    align-self: flex-start;
+}

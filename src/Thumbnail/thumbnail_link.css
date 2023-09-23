@@ -1,0 +1,17 @@
+:root{
+    --desired_width:360px;
+}
+div.thumbnail-flex {
+    margin: .5rem;
+    display: flex;
+    flex-flow: column nowrap;
+    max-width: var(--desired_width);
+}
+
+img.landscape {
+    max-width: 100%;
+    width: var(--desired_width);
+    height: auto;
+    object-fit: scale-down;
+    aspect-ratio: 1.5;
+}

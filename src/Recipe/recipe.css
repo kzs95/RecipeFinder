@@ -1,0 +1,18 @@
+hr {
+    border: 1px solid #faf0e6;
+}
+
+div[class|='recipe'] {
+    padding: .5rem;
+}
+
+span.recipe-stepName {
+    background: linear-gradient(#F0F8FF00, 70%, #f8f4ff);
+    padding-inline-end: 0.5rem;
+}
+
+div.misc-data{
+    display: flex;
+    flex-flow: row flex;
+    gap:1rem;
+}
