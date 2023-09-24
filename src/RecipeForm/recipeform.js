@@ -1,14 +1,7 @@
 // @ts-check
-import React from 'react'
-import { useState } from "react";
+import React, { useState } from 'react'
 import './recipeform.css';
 import { captialise } from '../Utilities/utilityFn.js';
-
-// function captialise(str){
-//     const regExp = /\b\w+?/g;
-//     if (typeof str !== 'string') return;
-//     return str.replaceAll(regExp,(letter)=>letter.toUpperCase());
-// }
 
 const cuisines = ['African', 'Asian', 'American', 'British', 'Cajun', 'Caribbean', 'Chinese', 'Eastern European', 'European', 'French', 'German',
     'Greek', 'Indian', 'Irish', 'Italian', 'Japanese', 'Jewish', 'Korean', 'Latin American', 'Mediterranean', 'Mexican', 'Middle Eastern', 'Nordic',
@@ -28,11 +21,12 @@ export default function RecipeForm({ handleForm }) {
 
     function handleSubmit(event) {
         // The pagination component needs the url also. so here just process the search params and then send to home.js
+        // Prev code process Url object:
+        
         // event.preventDefault();
         // const formData = new FormData(event.target);
         // const spoonURL = new URL('https://api.spoonacular.com/recipes/complexSearch');
         // const searches = spoonURL.searchParams;
-
         // for (const [name, value] of formData) {
         //     if (value) searches.set(name, value);
         // }
@@ -54,6 +48,7 @@ export default function RecipeForm({ handleForm }) {
         <form name='recipe_search' onSubmit={handleSubmit}>
             <label>Recipe Keyword
                 <input required name='query' type='text' placeholder='Pasta, Fish, ...' pattern='[\s\w]+' value={keyword} onChange={(evt) => handleInputChange(setKeyword, evt.target.value)} />
+                <small>Use latin characters and space only.</small>
             </label>
             <label>Type of Cuisine
                 <select value={cuisine} name='cuisine' onChange={(evt) => handleInputChange(setCuisine, evt.target.value)}>

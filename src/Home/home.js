@@ -11,8 +11,7 @@ function ThumbnailInfoCheck(rcpObj) {
 
 export default function Home() {
     const searchNum = 20;
-    //maybe merge 1st two state to just the json return
-    const [fetchStatus, setFetchStatus] = useState({ loading: false, done: false, found: 0 });
+    const [fetchStatus, setFetchStatus] = useState({ loading: false, done: false, found: 0 }); //loading: fetch ongoing, done : fetch returned, found: no of recipe found
     const [recipeList, setRecipeList] = useState([]); //keep track of current recipes displayed/obtained
     const [resultPageNo, setResultPageNo] = useState(1); //keep track of no. of pages of result
     const [searchParams, setSearchParams] = useState(); //keep track of the searchParams, react-router's useSearchParams() show the query in URL, which I don't want
@@ -23,18 +22,14 @@ export default function Home() {
         searchParamObj.set('number', searchNum);
         searchParamObj.set('offset', skip * searchNum);
         spoonURL.search = searchParamObj.toString();
-
-        setFetchStatus({ ...fetchStatus, ...{ loading: true } });
+        setFetchStatus({ ...fetchStatus, ...{ loading: true, done: false } });
         try {
-            // const getRecipe = await fetch('FishAll.json'); //test
             const getRecipe = await fetch(spoonURL.href);
             if (getRecipe.status === 200) {
                 const recipes = await getRecipe.json();
-                console.log(recipes);
                 searchParamObj.delete('apiKey');
                 // Should hide the API key? Guess this will make API key needed to be fetch from .env every fetch, rather than keep it as search params
                 setRecipeList(recipes.results);
-                // setRecipeList(recipes.results.slice(skip * searchNum, (skip * searchNum) + searchNum)); //test
                 setResultPageNo(Math.ceil(recipes.totalResults / recipes.number));
                 setSearchParams(searchParamObj);
                 setFetchStatus({ loading: false, done: true, found: recipes.totalResults });
@@ -74,7 +69,7 @@ export default function Home() {
                             recipe && ThumbnailInfoCheck(recipe) ? <ThumbnailLink key={recipe.id} recipeId={recipe.id} thumbText={recipe.title} imgURL={recipe.image} /> : null)
                         }
                     </div>
-                </> : fetchStatus.done? <p>No Results</p> : null
+                </> : fetchStatus.done ? <p>No Results</p> : null
             }
             {resultPageNo > 1 ? <ResultPagination pageNum={resultPageNo} updatePageFn={nextPage} /> : null}
         </>

@@ -31,6 +31,7 @@ label:has(:not(input[type='radio'])){
 
 input,select{
     max-width: 100%;
+    font-size: .9rem;
 }
 
 input[type='submit'],

@@ -7,12 +7,21 @@ div[class|='recipe'] {
 }
 
 span.recipe-stepName {
-    background: linear-gradient(#F0F8FF00, 70%, #f8f4ff);
+    background: linear-gradient(#f0fff0,#fdf5e6);
     padding-inline-end: 0.5rem;
 }
 
-div.misc-data{
+div.misc-data {
     display: flex;
     flex-flow: row flex;
-    gap:1rem;
+    gap: 1rem;
+}
+
+div[class|=recipe] {
+    background: linear-gradient(#fffafa, 20%, #F8F8FF, 50%, #F8F8FF00);
+}
+
+figure.recipe-illus-img>img {
+    width: 556px;
+    aspect-ratio: 1.5;
 }

@@ -4,13 +4,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap');
 
-* {
+*{
   font-family: 'Caveat', 'Garamond', 'Times New Roman', 'serif';
-  font-size: 1.1rem;
 }
 
 html {
   box-sizing: border-box;
+  font-size: 1.25rem;
 }
 
 body {
@@ -41,7 +41,6 @@ h2 {
   font-weight: normal;
   font-size: clamp(1.3rem, 1.3846rem + 1.2308vw, 2rem);
   margin-block: .5rem;
-  width: max-content;
   color: transparent;
   background-image: linear-gradient(to right, #ffa6c9, #f6adc6, #c5dbda);
   background-clip: text;
@@ -52,8 +51,7 @@ h3 {
   font-family: 'Square Peg';
   font-weight: normal;
   font-size: clamp(1.1rem, 1.3846rem + 1.2308vw, 1.5rem);
-  margin-block: .3rem .5rem;
-  width: max-content;
+  margin-block: 0 .5rem;
   color: transparent;
   background-image: linear-gradient(to right, #26619c, 70%, #ccccff);
   background-clip: text;

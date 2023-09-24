@@ -1,7 +1,6 @@
 // @ts-check
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom';
-
 import { captialise } from '../Utilities/utilityFn.js';
 import './recipe.css';
 import serveIcon from './serve.svg';
@@ -27,7 +26,6 @@ export default function Recipe() {
             setLoading(true);
             try {
                 const getRecipeInfo = await fetch(`https://api.spoonacular.com/recipes/${recipeId}/information?apiKey=${process.env.REACT_APP_SPOONACULAR_API_KEY}`);
-                // const getRecipeInfo = await fetch('/cognee/cogneeInfo.json');
                 if (getRecipeInfo.status === 200) {
                     const recipeInfo = await getRecipeInfo.json();
                     const recipeName = recipeInfo.title;
@@ -69,13 +67,14 @@ export default function Recipe() {
         return (
             <div>
                 <h2>{recipeData.name}</h2>
-                <figure>
+                <figure className='recipe-illus-img'>
                     <img alt={recipeData.name} src={recipeData.imgURL} />
                     <figcaption>{recipeData.name}</figcaption>
                 </figure>
                 <div className='recipe-misc'>
                     <RecipeMisc misc={recipeData.misc}/>
                 </div>
+                <hr/>
                 <div className='recipe-ingredient'>
                     <h3>Ingredients</h3>
                     <table>
@@ -118,8 +117,3 @@ export default function Recipe() {
         )
     }
 }
-
-// GET https://api.spoonacular.com/recipes/{id}/information (have even more detailed ingredients)
-// GET https://api.spoonacular.com/recipes/{id}/ingredientWidget.json
-// GET https://api.spoonacular.com/recipes/{id}/analyzedInstructions (Not worth it. aldy covered by information!)
-// GET https://api.spoonacular.com/recipes/{id}/equipmentWidget.json (Meh)

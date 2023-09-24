@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './result_pagination.css';
 
 export default function ResultPagination({ pageNum, updatePageFn }) {
     const maxButtons = 10;
@@ -17,7 +18,7 @@ export default function ResultPagination({ pageNum, updatePageFn }) {
                 {Array(pageNum <= maxButtons ? pageNum : btnNeeded).fill(btnPage.current - 1).map((num, index) =>
                     <button key={num * maxButtons + index + 1} className='page-button' onClick={() => updatePageFn(num * maxButtons + index + 1)}>{num * maxButtons + index + 1}</button>)}
             </div>
-            {pageNum <= maxButtons ? null : <div>Pages <select onChange={handleChange}>
+            {pageNum <= maxButtons ? null : <div className='page-button-select-wrapper'>Pages <select className='page-button-select' onChange={handleChange}>
                 {Array(Math.ceil(pageNum / maxButtons)).fill(1).map((num, index) =>
                     <option key={'btnPg' + index} value={index + 1}>{index * maxButtons + 1} - {Math.min(pageNum, (index + 1) * maxButtons)}</option>)}
             </select></div>

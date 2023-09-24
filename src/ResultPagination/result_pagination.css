@@ -1,0 +1,33 @@
+div.page-button-wrapper,
+div.page-button-select-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: stretch;
+    justify-items: flex-start;
+    gap: .5rem 1rem;
+}
+
+div.page-button-wrapper {
+    margin-bottom: .5rem;
+}
+
+button.page-button {
+    width: 1.5rem;
+    aspect-ratio: 1;
+    font-size: .9em;
+    padding: 1px 5px;
+    background-color: #fff0f5;
+    border-color: #cec8ef;
+}
+
+select.page-button-select{
+    background-color: #fffaf0;
+    font-size: .9rem;
+}
+
+@media(hover:hover) {
+    button.page-button:hover {
+        background-image: radial-gradient(circle at bottom right,#fff0f5, #e6e8fa,#d8bfd8);
+    }
+}
