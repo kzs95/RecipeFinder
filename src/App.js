@@ -13,7 +13,8 @@ export default function App() {
           <Link to="/" id='homeIcon'><h1>Recipe Finder</h1></Link>
         </nav>
         <Routes>
-          <Route path={["/", "/RecipeFinder"]} element={<Home />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/RecipeFinder/" element={<Home />} />
           <Route path="/recipe/:recipeId" element={<Recipe />} />
         </Routes>
       </BrowserRouter>
