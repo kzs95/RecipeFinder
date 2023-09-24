@@ -1,5 +1,5 @@
 # Recipe Finder
-Simple page to find recipe, created using create-reatc-app.
+Simple page to find recipes, created using create-react-app.
 
 ## API Used
 spoonacular (https://spoonacular.com/food-api)
